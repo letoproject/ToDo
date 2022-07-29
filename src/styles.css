@@ -5,3 +5,7 @@ ul {
 #container {
   padding-left: 0;
 }
+
+.btn-outline-success {
+  margin-right: 12px;
+}
