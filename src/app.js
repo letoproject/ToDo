@@ -22,6 +22,16 @@ document.getElementById("container").addEventListener("click", (e) => {
   }
 });
 
+const closeBtns = document.querySelectorAll('[data-bs-dismiss="modal"]');
+  closeBtns.forEach((closeBtn) => {
+    closeBtn.addEventListener("click", (e) => {
+    console.log("close")
+    const form = document.querySelector(".needs-validation");
+    form.classList.remove("was-validated");
+    }
+  )}
+);
+
 // Function for todolist rendering
 function renderTodos() {
   document.getElementById("container").innerHTML = "";
@@ -50,6 +60,9 @@ function renderTodos() {
     document.getElementById("container").appendChild(li);
   });
 }
+
+
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 function validation() {
